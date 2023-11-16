@@ -1,0 +1,16 @@
+
+<div class="flex py-3 px-10 justify-between">
+    <h1 class="text-gray-600 font-extrabold text-4xl">
+        Match History
+    </h1>
+  </div>
+  <div class="flex flex-wrap items-stretch">
+    @for (match of allMatch; track $index) {
+    @if (match.status==='COMPLETED') {
+      <div class="w-full md:w-[33%] p-3">
+        <app-match-component [data]="match"></app-match-component>
+          
+        </div>
+    }
+    }
+  </div>
